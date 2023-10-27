@@ -1,0 +1,88 @@
+.main-navebar-phone .navbar-light{
+    background-color: #4d9de6;
+}
+.navbar-light .navbar-toggler-icon{
+    background-image: url(../images/icons/menuicon.png);
+}
+.navbar-toggler {
+    border: 0;
+}
+
+.navbar>.container-fluid {
+    background-color: #4d9de6;
+    width: 80%;
+    justify-content: unset;
+}
+.navbar>.container-fluid .navicon-logotext {
+    width: 25%;
+}
+.navbar>.container-fluid .navicon-logotext button {
+    display: none;
+}
+.navbar>.container-fluid .navebaricon-sec{
+    display: flex;
+    justify-content: center;
+    width: 75%;
+}
+.navebaricon-sec .navbaricon-contain .search-icon-phone .searchicon input{
+    width: 310px;
+}
+.neviconwidth{
+    width: 30px;
+}
+.locationicon{
+    width: 23px;
+}
+.text-logo h3 {
+    margin: auto;
+    font-family: 'Lato';
+    font-weight: 500;
+    color: white;
+}
+.text-logo span {
+    font-weight: 900;
+}
+.navbar-toggler{
+    padding: unset;
+}
+.main-navebar-phone .navbar .container-fluid{
+    padding-block: 10px;
+}
+.main-navebar-phone .navbar{
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 1051;
+}
+.navbar-toggler:focus{
+    box-shadow: unset;
+}
+
+.sidebar-menu-box.offcanvas{
+    max-width: 60%;
+    padding-top: 17%;
+}
+
+@media only screen and (max-width: 801px) {
+    .navbar>.container-fluid{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .navbar>.container-fluid .navicon-logotext button {
+        display: unset;
+    }
+    .navebaricon-sec .navbaricon-contain .search-icon-phone .searchicon input{
+        display: none;
+    }
+    .navbar>.container-fluid .navebaricon-sec{
+        display: unset;
+        justify-content: unset;
+        width: unset;
+    }
+    .navbar>.container-fluid .navicon-logotext {
+        width: unset;
+    }
+  }
+
+  /* @media (min-width:801px)  {
+
+  } */

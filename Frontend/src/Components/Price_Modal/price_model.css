@@ -1,0 +1,13 @@
+@media (min-width: 576px) {
+    .price .modal-dialog {
+        max-width: 450px !important;
+
+    }
+}
+
+/* .priceul{
+    display: 'flex' !important;
+    justify-content: 'space-between' !important;
+    list-style: 'none' !important;
+    padding: 0 !important;
+} */

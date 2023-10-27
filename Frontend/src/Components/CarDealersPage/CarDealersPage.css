@@ -1,0 +1,64 @@
+.cardealerssec-search{
+    justify-content: center;
+    gap: 10%;
+}
+.cardealerssec-search .brand-search{
+    width: 20%;
+}
+.cardealerssec-search .city-search{
+    width: 20%;
+}
+.border-bottom-3{
+    border-bottom: 3px solid #c3c3c3;
+}
+.link-text{
+    color: #4d9de6;
+}
+.cardealerssec-title-banner-box{
+    background-color: #ab9d8a;
+}
+.cardealerssec-title-banner{
+    background-image: url(../images/Banners/dealerspagebanner.png);
+    background-position: center;
+    height: 300px;
+    font-family: "Lato";
+}
+.cardealerslist h4 .offertag{
+    background-color: #ab1a0a;
+    border: 1px solid;
+    color: white;
+    padding-inline: 10px;
+    font-size: 16px;
+    margin-inline: 10px;
+}
+.cardealerslist h4{
+    font-size: 18px;
+    font-weight: bold;
+}
+.cardealerslist p{
+    font-size: 15px;
+}
+
+@media (max-width: 575px){
+    .cardealerssec-search{
+        justify-content: space-between;
+    }
+    .cardealerssec-search .brand-search{
+        width: 45%;
+    }
+    .cardealerssec-search .city-search{
+        width: 45%;
+    }
+    .cardealerssec-title-banner{
+        background-image: url(../images/Banners/dealerspagebanner-phone.png);
+        background-position: bottom;
+        height: 140px;
+        font-family: "Lato";
+    }
+}
+
+@media (min-width: 610px){
+    .dlr{
+        display: flex;
+    }
+}

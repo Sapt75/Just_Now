@@ -1,0 +1,34 @@
+.price-title-image-box{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.image-width-80{
+    width: 80%;
+}
+
+.link-button{
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 0;
+    margin-block: 10px;
+}
+.image-20{
+    width: 20px;
+}
+
+.price-details{
+    display: flex;
+}
+
+
+@media only screen and (max-width: 601px) { 
+    .price-title-image-box{
+        display: block;
+        flex-direction: unset;
+    }
+    .price-details{
+        display: block;
+    }
+}

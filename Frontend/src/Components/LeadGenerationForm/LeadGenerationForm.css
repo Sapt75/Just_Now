@@ -1,0 +1,7 @@
+.leadform-title button{
+    text-underline-offset: 3px;
+    /* line-height: 25px; */
+}
+.leadform-title button img{
+    width: 16px;
+}

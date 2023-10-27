@@ -1,0 +1,223 @@
+/* Global h2 text for car title */
+.g-h3{
+    font-size: 18px !important;
+    font-weight: bold !important;
+    font-family: "Roboto" !important;
+    margin: 0;
+}
+.g-h4{
+    font-size: 16px !important;
+    font-weight: bold !important;
+    margin: 0;
+}
+.g-h5{
+    font-size: 10px;
+}
+.g-p10{
+    font-size: 10px;
+}
+.g-p{
+    font-size: 12px;
+}
+.g-p-13{
+    font-size: 13px;
+}
+.g-white-text{
+    color: white;
+}
+.g-p-lh{
+    line-height: 20px;
+}
+.g-theme-background{
+    background-color: #4d9de6;
+}
+.g-read-more-btn{
+    background-color: transparent;
+    border: none;
+    color: #4d9de6;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    }
+.g-link{
+    color: #4d9de6;
+    background-color: transparent;
+    border: 0;
+}
+
+.g-link-button-new{
+    background-color: transparent;
+    color: #4d9de6;
+    border: none;
+    font-size: 12px;
+}
+
+.g-button-for-phone{
+    display: none;
+}
+
+
+.g-link-button-d{
+    font-size: 18px;
+    background-color: transparent;
+    color: #4d9de6;
+    border: none;
+    padding: 0 5px 5px 5px;
+}
+.g-link-button-normal{
+    font-size: 13px;
+    background-color: transparent;
+    border: none;
+    color: #4d9de6;
+}
+.g-link-button{
+    font-size: 13px !important;
+    background-color: transparent !important;
+    color: #4d9de6 !important;
+    /* text-decoration: underline; */
+    border: none !important;
+    padding: 0 5px 5px 5px ;
+}
+.g-underline{
+    text-decoration: underline !important;
+}
+
+.g-box-text{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+
+.blue-background-btn{
+    background-color: #4d9de6;
+    color: white;
+}
+.g-bold{
+    font-weight: bold;
+}
+.g-button{
+    background-color: #4d9de6;
+    color: white;
+}
+.dropdown-menu{
+    /* opacity: 0 !important; */
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+}
+.dropdown-menu .dropdown-item{
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+
+
+.list-style-none li{
+    list-style: none;
+}
+
+/* footer Css */
+
+.footer-box{
+    justify-content: center;
+}
+.footer-box-inner{
+    width: 80%;
+    display: flex;
+}
+
+.display-none-desktop{
+    display: none;
+}
+.display-none-phone{
+    display: unset;
+}
+
+.footerfont-p{
+    font-size: 16px;
+}
+
+.gray-color-background-phone{
+    background-color: unset;
+}
+
+.btn-primary:focus {
+    box-shadow: none;
+}
+.getonroadpricebutton .get-on-road-price-popup-btn{
+    width: 100%;
+    border-radius: 0;
+    font-weight: bold;
+    font-size: 18px;
+    padding-block: 10px;
+}
+
+.width-phone{
+    width: 70%;
+}
+.g-phone-link-button{
+    display: none;
+}
+
+.spec-data{
+    border-bottom: 1px solid #d0d0d0;
+    padding: 8px 0px;
+}
+.spec-data:last-child{
+    border:none;
+}
+@media only screen and (min-width: 600px) {
+.gorp-phone-btn{
+    display: none !important;
+}
+
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .bb-box{
+        padding: 0;
+    }
+    .m-bg{
+        background-color: #E1E1E1 !important;
+    }
+    .imgdetailbox{
+        padding: 10px 0 0;
+    }
+    .footer-box-inner{
+        width: 90%;
+    }
+    .footerfont-p{
+        font-size: 10px;
+    }
+    .display-none-desktop{
+        display: block;
+    }
+    .display-none-phone{
+        display: none;
+    }
+    .gray-color-background-phone{
+        background-color: #dddddd !important;
+    }
+    .g-box-text{
+        font-size: 10px;
+        font-weight: normal;
+    }
+    .width-phone{
+        width: 100%;
+    }
+    
+    .gorp-phone-btn{
+        background-color: #4d9de6;
+        color: white;
+        border: none;
+    }
+    .g-button-for-phone{
+    display: none;
+    }
+    .g-link-button-d{
+        display: none;
+    }
+}

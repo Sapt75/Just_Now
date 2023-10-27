@@ -1,0 +1,45 @@
+.modal-header{
+    border: none;
+}
+.form-logo h3{
+    font-family: 'Lato';
+    /* font-weight: bold; */
+    color: #4D9DE3;
+}
+.form-logo h3 span {
+    font-weight: 900;
+}
+.lead-form-full .container .row .leadform-box{
+    padding: 0;
+}
+.lead-form-full .container .row .leadform-box .leadform-title{
+    justify-content: space-between;
+}
+/* .lead-form-popup .modal-dialog{
+    margin: 0;
+} */
+.btn-primary:active:focus{
+    box-shadow: none;
+}
+
+@media (max-width: 575px){
+    .modal-dialog {
+        max-width: 760px;
+        margin: auto;
+        height: 100%;
+    }
+    /* .modal-dialog .modal-content{
+        height: 100%;
+    } */
+}
+
+@media (min-width: 576px){
+.modal-dialog {
+    max-width: 760px;
+    margin: 4.5rem auto;
+}
+.lead-form-full .container{
+    width: 70%;
+}
+
+}

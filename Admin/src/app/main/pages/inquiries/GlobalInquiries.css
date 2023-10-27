@@ -1,0 +1,7 @@
+tbody tr td, th {
+    border: solid 0.5px #e2e2e2;
+}
+tbody tr td a{
+    text-decoration: none !important;
+    color: unset !important;
+}

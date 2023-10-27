@@ -1,0 +1,83 @@
+.acc-one .acc-one-head button {
+    padding: 0;
+}
+
+.acc-main .accordion-common {
+    border: none;
+    padding-block: 8px;
+}
+
+.acc-main .accordion-common button {
+    border: none;
+    padding: 0;
+
+}
+
+.acc-main .accordion-common button :focus {
+    color: unset;
+    box-shadow: none;
+}
+
+
+.acc-main .accordion-common .accordion-header .accordion-button:focus {
+    color: unset;
+    box-shadow: none;
+}
+
+
+.acc-main .accordion-common .accordion-header .accordion-button:not(.collapsed) {
+    color: unset;
+    box-shadow: none;
+    background-color: unset;
+}
+
+.acc-main .accordion-common .accordion-header .accordion-button::after {
+    background-image: url(../images/icons/plus.png);
+}
+
+.body-drop {
+    animation: back;
+    animation-duration: 0.3s;
+}
+
+.body-rev{
+    animation: front;
+    animation-duration: 0.3s;
+}
+
+.brand-rev{
+    animation: front;
+    animation-duration: 0.3s;
+}
+
+.brand-drop {
+    animation: back;
+    animation-duration: 0.3s;
+}
+
+.navbar-toggler{
+    padding: 0 !important
+}
+
+
+@keyframes back {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes front {
+    0% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+
+}

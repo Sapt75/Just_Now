@@ -1,0 +1,22 @@
+.mostsearchedcarstab{
+    padding: 0;
+    
+}
+
+
+.mostsearchedcarstab .react-tabs__tab{
+    padding: 6px 6px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 0;
+    bottom: unset;
+}
+.mostsearchedcarstab .react-tabs__tab::after{
+    display: none;
+}
+
+.mostsearchedcarstab .react-tabs__tab--selected{
+    border-radius: unset;
+    background: unset;
+    color: #4d9de6;
+}

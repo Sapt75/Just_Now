@@ -1,0 +1,54 @@
+.txt1{
+    color: #6F6F4A;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.txt2{
+    font-family: LatoGoogle,Lato,LatoWeb,sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.input{
+    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+    background-color: #fbfbfb;
+    padding: 0.8rem;
+    cursor: pointer;
+}
+
+.input:hover{
+    color: #00afa0;
+}
+
+ input[type="radio"]:checked{
+    background-color:#00afa0;
+}
+
+.scroller{
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.bot{
+    background-color: #00afa0;
+    padding: 16px 20px;
+    color: #fff;
+}
+
+.scroller::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroller::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+.scroller::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #d5d5d5; 
+}

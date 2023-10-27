@@ -1,0 +1,303 @@
+
+.tabs-for-cars-info ul li{
+    display: inline!important;
+    /* padding-left: 85px!important; */
+    /* padding-right: 85px!important; */
+    padding-top: 10px!important;
+    padding-bottom: 10px!important;
+    font-size: 20px!important;
+    
+}
+
+
+
+/* .tabs-for-cars-info ul li:hover{
+    text-decoration: underline!important;
+    color: #4d9de6!important;
+} */
+/* .tabs-for-cars-info ul li:active{
+    text-decoration: underline!important;
+    color: #4d9de6!important;
+} */
+.tabs-for-cars-info ul li a:hover{
+    text-decoration: underline !important;
+    text-underline-offset: 2px!important;
+    color: #4d9de6!important;
+}
+.tabs-for-cars-info ul li a:active{
+    text-decoration: underline !important;
+    text-underline-offset: 2px!important;
+    color: #4d9de6!important;
+}
+.advertisementbox p{
+    margin: auto!important;
+}
+.key-specs-table tbody{
+    border: solid 1px #dddddd!important;
+}
+.key-specs-table tbody tr{
+    border-bottom: solid white 1px!important;
+}
+.key-specs-table tbody tr td{
+    width: 50%!important;
+    border-right: solid 1px #dddddd!important;
+}
+.light-gray-background{
+    background-color: #e3e3e3!important;
+}
+.gray-background{
+    background-color: #d0d0d0!important;
+}
+.tab-button-varients{
+    background-color: white!important;
+    color: black!important;
+    border-color: #dddddd!important;
+}
+.tab-button-varients:hover{
+    background-color: #4d9de6!important;
+    color: white!important;
+    border-color: #dddddd!important;
+}
+.tab-button-varients:active{
+    background-color: #4d9de6!important;
+    color: white!important;
+    border-color: #dddddd!important;
+}
+.table-row-53{
+    width: 53%!important;
+}
+.table-row-10{
+    width: 10%!important;
+}
+.width-22{
+    width: 22px!important;
+}
+.width-40{
+    width: 40px!important;
+}
+.colourgray{
+    background-color: gray!important;
+}
+.coloulightblue{
+    background-color: #4d9de6!important;
+}
+.coloured{
+    background-color: red!important;
+}
+.colorwhite{
+    background-color: white!important;
+}
+.colorblack{
+    background-color: black!important;
+}
+.colortab-m{
+    width: 30px!important;
+    height: 30px!important;
+    border: 0!important;
+    margin: 7px!important;
+}
+.colourname{
+    font-size: 18px!important;
+}
+.milage-table-box tr{
+    text-align: center!important;
+}
+.milage-table-box{
+    border-bottom: solid white!important;
+    font-size: 14px!important;
+}
+
+.table-row-53{
+    width: 53%!important;
+}
+.table-row-40{
+    width: 40%!important;
+}
+.price-table-btn{
+    /* width: 100px!important; */
+    line-height: 15px!important;
+    text-align: start!important;
+    border: none!important;
+    color: #4d9de6!important;
+    background-color: unset!important;
+}
+.price-table-box tr, td{
+    vertical-align: middle!important;
+}
+.price-table-box tr th{
+    font-size: 15px!important;
+}
+.pros-of-car ul{
+    padding-left: 20px!important;
+    font-size: 18px!important;
+}
+.cons-of-car ul{
+    padding-left: 20px!important;
+    font-size: 18px!important;
+}
+.price-table-box{
+    border-bottom: solid white!important;
+}
+.varients-table tr{
+    border-bottom: 5px solid white;
+}
+.tabs-for-cars-info ul{
+    padding: 0!important;
+    margin: 0!important;
+    width: 100%!important;
+}
+.car-varient-name{
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+    display: -webkit-box!important;
+    -webkit-line-clamp: 2!important;
+    -webkit-box-orient: vertical!important;
+}
+
+
+
+@media only screen and (min-width: 600px) {
+    .bigt {
+        justify-content: center!important;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    /* for tabs  */
+    .tabs-for-cars-info ul li {
+        display: inline!important;
+        padding-left: 7px!important;
+        padding-right: 7px!important;
+        padding-top: 10px!important;
+        padding-bottom: 10px!important;
+        font-size: 16px!important;
+    }
+
+    
+    .tabs-for-cars-info ul{
+        padding: 0!important;
+        margin: 0!important;
+        justify-content: space-between!important;
+    }
+    .price-of-car-for-phone{
+        font-size: 11px!important;
+        font-weight: bold!important;
+        padding: 0 !important;
+        line-height: 32px!important;
+    }
+    .tabs-for-cars-info{
+        justify-content: center!important;
+    }
+    .pros-and-cons-sec .pros-and-cons .cons-of-car{
+        margin-top: 10px!important;
+    }
+    .inner-width-sm{
+        padding-block: 10px!important;
+    }
+    .inner-width-ex{
+        padding-block: 10px!important;
+    }
+    .background-color-1{
+        background-color:#d0d0d0!important;
+    }
+    .background-color-2{
+        background-color: #e3e3e3!important;
+    }
+
+}
+
+@media only screen and (min-width: 601px) {       
+    .car-def-varients .varients-table tbody .varients-firstrow .table-com-col  {
+        display: flex!important;
+        border: unset!important;
+    }
+    .car-def-varients .varients-table tbody .varients-firstrow .table-com-col .table-com-p {
+        /* width: 50%!important; */
+        margin-top: 0;
+    }
+    .car-def-varients .varients-table tbody .varients-firstrow .table-com-col  button{
+        width: 50%!important;
+        padding-top: 20px!important;
+    }
+
+    .car-def-varients .varients-table tbody .varients-secondrow .table-com-col  {
+        display: flex!important;
+        border: unset!important;
+    }
+    .car-def-varients .varients-table tbody .varients-secondrow .table-com-col p {
+        width: 50%!important;
+        margin-top: 0!important;
+    }
+    .car-def-varients .varients-table tbody .varients-secondrow .table-com-col  button{
+        width: 50%!important;
+        padding-top: 20px!important;
+    }
+
+    .car-def-varients .varients-table tbody .varients-thirdrow .table-com-col  {
+        display: flex!important;
+        border: unset!important;
+    }
+    .car-def-varients .varients-table tbody .varients-thirdrow .table-com-col p {
+        width: 50%!important;
+        margin-top: 0!important;
+    }
+    .car-def-varients .varients-table tbody .varients-thirdrow .table-com-col  button{
+        width: 50%!important;
+        padding-top: 20px!important;
+    }
+    .image-price-title-sec{
+        /* width: 60%!important; */
+        display: flex!important;
+        flex-direction: row-reverse!important;
+        margin-top: 10px!important;
+    }
+    .image-price-title-sec .imageslider {
+        width: 50%!important;
+    }
+    .image-price-title-sec .image-title-price-review{
+        width: 50%!important;
+        display: flex!important;
+    }
+    .image-price-title-sec .image-title-price-review .image-title-price-box{
+        margin-top: 10%!important;
+    }
+    .imagecarousel-box .carousel-slider .slider-wrapper {
+        width: 70%!important;
+    }
+    .tabs-for-cars-info{
+        padding-inline: 20%!important;
+    }
+    .tabs-for-cars-info ul{
+        gap: 5%!important;
+    }
+    .imageslider .imagecarousel .imagecarousel-box .thumbs-wrapper.axis-vertical{
+        margin-block: 0!important;
+    }
+    /* .desktop-page-width-60{
+        width: 60%!important;
+    } */
+    .justify-center-d{
+        justify-content: center!important;
+    }
+    .pros-and-cons-sec .pros-and-cons{
+        display: flex!important;
+        gap: 20%!important;
+    }
+    .inner-width-sm{
+        width: 15%!important;
+        padding-block: 10px!important;
+    }
+    .inner-width-ex{
+        width: 20%!important;
+        padding-block: 10px!important;
+    }
+    .background-color-1{
+        background-color: #e3e3e3!important;
+    }
+    .background-color-2{
+        background-color: #d0d0d0!important;
+    }
+}

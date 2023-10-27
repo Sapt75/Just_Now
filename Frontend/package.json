@@ -1,0 +1,76 @@
+{
+  "name": "getonroadprice",
+  "version": "0.1.0",
+  "homepage": "https://getonroadprice.com/",
+  "private": true,
+  "proxy": "http://localhost:5000",
+  "dependencies": {
+    "@coreui/coreui": "^4.2.6",
+    "@coreui/react": "^4.8.0",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@material/circular-progress": "^14.0.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.12.0",
+    "@mui/styled-engine-sc": "^5.11.0",
+    "@splidejs/react-splide": "^0.7.12",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.2.2",
+    "image-slider-react": "^1.0.6",
+    "imagekitio-react": "^2.0.0",
+    "prettier": "^3.0.3",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.6.0",
+    "react-bootstrap-accordion": "^1.0.0",
+    "react-bootstrap-modal": "^4.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet-async": "^1.3.0",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-redux": "^8.1.2",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.4.2",
+    "react-router-hash-link": "^2.4.3",
+    "react-scripts": "5.0.1",
+    "react-slideshow-image": "^4.0.5",
+    "react-tabs": "^5.1.0",
+    "sass": "^1.56.0",
+    "styled-components": "^5.3.6",
+    "swiper": "^8.4.4",
+    "uglify-js": "^3.17.4",
+    "web-vitals": "^2.1.4",
+    "yarn": "^1.22.19"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "set GENERATE_SOURCEMAP=false && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "babel": "babel src -d views"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

@@ -1,0 +1,373 @@
+.pad1 {
+    /* padding-top: 2rem; */
+    padding-left: 4rem;
+}
+
+.input1 {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #d5d5d5;
+    font-size: medium;
+    color: #484848;
+}
+
+.mbody {
+    /* margin-top: -1.4rem; */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 6rem;
+}
+
+.loc {
+    margin-top: 0.5rem;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.list {
+    list-style: none;
+    overflow-y: scroll;
+    height: 400px;
+}
+
+.list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.list::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+.list::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #d5d5d5;
+}
+
+.pad2 {
+    margin-right: 6rem;
+}
+
+.locli {
+    border-bottom: 1px solid #e1e1e1;
+    font-size: 13px;
+    padding: 12px 0;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: 'LatoGoogle';
+    font-display: swap;
+    src: url('https://stc.aeplcdn.com/fonts/lato-bold.woff2') format('woff2'),
+        url('https://stc.aeplcdn.com/fonts/lato-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LatoGoogle';
+    font-display: swap;
+    src: url('https://stc.aeplcdn.com/fonts/lato-regular.woff2') format('woff2'),
+        url('https://stc.aeplcdn.com/fonts/lato-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.o-cpnuEd {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.o-brXWGL {
+    position: relative;
+}
+
+.o-cXBIhK {
+    z-index: 1;
+}
+
+.o-efHQCX {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.o-bfyaNx {
+    width: 100%;
+}
+
+.o-eZTujG {
+    color: #484848;
+}
+
+.o-eYMbrh {
+    background-color: #efefef;
+}
+
+.TvEYbO {
+    min-height: 76px;
+}
+
+@media screen and (min-width: 800px) {
+    .TvEYbO {
+        min-height: 86px;
+    }
+}
+
+.o-fqusGR {
+    overflow-x: hidden;
+}
+
+.o-aLrhU {
+    overflow-y: hidden;
+}
+
+.o-dcRgip {
+    z-index: 0;
+}
+
+.o-bTDyCI {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+}
+
+.o-fDnrXc {
+    -webkit-flex-shrink: 1;
+    flex-shrink: 1;
+}
+
+.o-cqgkZn {
+    -webkit-flex-basis: auto;
+    flex-basis: auto;
+}
+
+.o-dMAfbA {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@media screen and (min-width: 800px) {
+    .o-bKsToU {
+        scrollbar-width: auto;
+        -ms-overflow-style: auto;
+    }
+}
+
+.o-bqHweY {
+    overflow: hidden;
+}
+
+.o-cgpzMr {
+    position: fixed;
+}
+
+.o-dqrENu {
+    top: 50%;
+}
+
+.o-dFbqSa {
+    left: 50%;
+}
+
+.o-crgVKG {
+    visibility: visible;
+}
+
+.o-bCRRBE {
+    background-color: #fff;
+}
+
+@media screen and (min-width: 800px) {
+    .o-fBNTVC {
+        border-radius: 6px;
+    }
+}
+
+.o-eVlMgO {
+    opacity: 1;
+}
+
+.o-dCStIN {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.bml8NN {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 4px 0px;
+}
+
+.dwiQSU {
+    will-change: opacity;
+    transition: visibility 0.2s linear 0s, opacity 0.3s ease 0s;
+}
+
+.KttQqm {
+    height: 552px;
+}
+
+.voh2vm {
+    width: 656px;
+}
+
+.o-dOoOCW {
+    z-index: 10;
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+    font-family: LatoGoogle, Lato, LatoWeb, sans-serif;
+    color: #484848;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.o-bXKmQE {
+    position: absolute;
+}
+
+.o-bwUciP {
+    bottom: 0px;
+}
+
+.o-eASyWY {
+    background-position: center;
+}
+
+.o-eZxiNd {
+    background-repeat: repeat-x;
+    background-repeat-x: repeat;
+    background-repeat-y: no-repeat;
+}
+
+.o-ctIjcA {
+    opacity: .3;
+}
+
+.xtJusF {
+    background-image: url("https://imgd.aeplcdn.com/0x0/cw/static/icons/svg/skyline-bg.svg");
+    width: 4096px;
+    height: 51px;
+    will-change: transform;
+    animation: 60s linear 0s 10 normal none running bL2bso;
+}
+
+*,
+:after,
+:before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+@keyframes bL2bso {
+    0% {
+        transform: translate(-2048px);
+        transform: translate(-2048px);
+    }
+
+    100% {
+        transform: translate(0px);
+        transform: translate(0px);
+    }
+
+}
+
+.pop {
+
+    position: relative;
+    width: 10rem;
+    text-align: center;
+    color: #fff;
+    background-color: black;
+    padding: 0.5em 0;
+    top: 3.4rem;
+    left: -1rem;
+    /* right: 1rem; */
+    /* font-size: 1.25em; */
+    border-radius: 1rem;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+}
+
+.pop::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 100%;
+    left: 2em;
+    border: .75rem solid transparent;
+    border-top: none;
+    border-bottom-color: black;
+    filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+}
+
+.pop2 {
+
+    position: relative;
+    width: 10rem;
+    text-align: center;
+    color: #fff;
+    background-color: black;
+    padding: 0.5em 0;
+    top: 3.4rem;
+    /* left: -1rem; */
+    right: -0.2rem;
+    /* right: 0.5rem; */
+    /* font-size: 1.25em; */
+    border-radius: 1rem;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+}
+
+.pop2::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 100%;
+    right: 1rem;
+    border: .75rem solid transparent;
+    border-top: none;
+    border-bottom-color: black;
+    filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+}
+
+.aler{
+    width: 0.6rem;
+    height: 0.6rem;
+    position: absolute;
+    background-color: red;
+    border-radius: 100%;
+    top: 8px;
+    right: 11px;
+}
+
+.btn-close{
+    position: relative !important;
+    z-index: 2;
+}
+
+.view{
+    position: absolute;
+    z-index: 1;
+}
