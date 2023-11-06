@@ -342,9 +342,7 @@ const PriceBreakupPage = () => {
                                   </div>
                                   <div className='d-flex justify-content-between mb-2'>
                                     <div>
-                                      <li ><RegistrationPop reg={registration} setReg={setRegistration} price={numFormat(item.ex_showroom_price + item.cow_cess + item.registeration_charges + item.road_safety_tax_cess + parseInt(registration === 0 ? item.rto : item[registration]) + item.mcd + item.fastag + item.hypothecation_charges + item.tax_collected_at_source_tcs)} />
-
-                                      </li>
+                                      <li className='fw-bold'>Individual Registration</li>
                                       <div className={`m-2 ${others === element.uid ? "d-block" : "d-none"}`}>
                                         <li className={`${item.cow_cess === null ? "d-none" : null}`}>COW Cess</li>
                                         <li className={`${item.registeration_charges === null ? "d-none" : null}`}>Registration Charges</li>
@@ -352,13 +350,14 @@ const PriceBreakupPage = () => {
                                         <li className={`${item.road_safety_tax_cess === null ? "d-none" : null}`}>Road Safety Tax/Cess</li>
                                         <li className={`${item.mcd === null ? "d-none" : null}`}>MCD</li>
                                       </div>
+
                                     </div>
                                     <div>
                                       <li className={`text-end fw-bold ${others === element.uid ? "d-none" : "d-block"}`}>₹ {item.cow_cess + item.registeration_charges + parseInt(registration === 0 ? item.rto : item[registration]) + item.road_safety_tax_cess + item.mcd} </li>
                                       <div className={`${others === element.uid ? "d-block" : "d-none"} drop-pd`}>
                                         <li className={`${item.cow_cess === null ? "d-none" : null}`}>₹ {item.cow_cess}</li>
                                         <li className={`${item.registeration_charges === null ? "d-none" : null}`}>₹ {item.registeration_charges}</li>
-                                        <li className={`${item.rto === null ? "d-none" : null}`}>₹ {registration === null ? item.rto : item[registration]}</li>
+                                        <li className={`${item.rto === null ? "d-none" : null}`}>₹ {registration === 0 ? item.rto : item[registration]}</li>
                                         <li className={`${item.road_safety_tax_cess === null ? "d-none" : null}`}>₹ {item.road_safety_tax_cess}</li>
                                         <li className={`${item.mcd === null ? "d-none" : null}`}>₹ {item.mcd}</li>
                                       </div>
@@ -367,7 +366,7 @@ const PriceBreakupPage = () => {
                                   </div>
                                   <div style={{ fontWeight: 600 }} className='d-flex justify-content-between mb-2'>
                                     <li>Insurance</li>
-                                    <li>₹ {item.insurance}</li>
+                                    <li>₹ {Math.round(item.insurance)}</li>
                                   </div>
                                   <div className='d-flex justify-content-between mb-2'>
                                     <div>
@@ -375,39 +374,31 @@ const PriceBreakupPage = () => {
                                       <div className={`m-2 ${others === element.uid ? "d-block" : "d-none"}`}>
                                         <li className={`${item.fastag === null ? "d-none" : null}`}>FASTag</li>
                                         <li className={`${item.hypothecation_charges === null ? "d-none" : null}`}>Hypothecation Charges</li>
-                                        <li className={`${item.tax_collected_at_source_tcs === null ? "d-none" : null}`}>Tax Collected at Source (TCS)</li>
+                                        <li className={`${Object.keys(item).includes("tax_collected_at_source_tcs") ? null : "d-none"}`}>Tax Collected at Source (TCS)</li>
                                       </div>
                                     </div>
                                     <div>
-                                      <li className={`text-end fw-bold ${others === element.uid ? "d-none" : "d-block"}`}>₹ {item.fastag + item.hypothecation_charges + item.tax_collected_at_source_tcs}</li>
+                                    {Object.keys(item).includes("tax_collected_at_source_tcs") ? <li className={`text-end fw-bold ${others === element.uid ? "d-none" : "d-block"}`}>₹ {item.fastag + item.hypothecation_charges + item.tax_collected_at_source_tcs}</li>: <li className={`text-end fw-bold ${others === element.uid ? "d-none" : "d-block"}`}>₹ {item.fastag + item.hypothecation_charges }</li>}
                                       <div className={` ${others === element.uid ? "d-block" : "d-none"} drop-pd`}>
                                         <li className={`${item.fastag === null ? "d-none" : null}`}>₹ {item.fastag}</li>
                                         <li className={`${item.hypothecation_charges === null ? "d-none" : null}`}>₹ {item.hypothecation_charges}</li>
-                                        <li className={`${item.tax_collected_at_source_tcs === null ? "d-none" : null}`}>₹ {item.tax_collected_at_source_tcs}</li>
+                                        <li className={`${Object.keys(item).includes("tax_collected_at_source_tcs") ? null : "d-none" }`}>₹ {item.tax_collected_at_source_tcs}</li>
                                         <div>
                                         </div>
                                       </div>
-                                      <li className={`text-end fw-bold ${others === element.uid ? "d-block" : "d-none"}`}>₹ {item.fastag + item.hypothecation_charges + item.tax_collected_at_source_tcs}</li>
+                                      {Object.keys(item).includes("tax_collected_at_source_tcs") ? <li className={`text-end fw-bold ${others === element.uid ? "d-block" : "d-none"}`}>₹ {item.fastag + item.hypothecation_charges + item.tax_collected_at_source_tcs}</li>: <li className={`text-end fw-bold ${others === element.uid ? "d-block" : "d-none"}`}>₹ {item.fastag + item.hypothecation_charges}</li>}
                                     </div>
                                   </div>
                                   <div className='d-flex justify-content-between mb-2'>
                                     <div>
-                                      <li style={{ fontWeight: 600 }}>Optional </li>
                                       <li className='my-3' style={{ color: "#0288d1", fontWeight: 700, fontSize: "13px", cursor: "pointer" }} onClick={() => {
                                         others === element.uid ? setOthers(0) : setOthers(element.uid)
                                       }}>{others === element.uid ? "Hide" : "Show"} Detailed Price Breakup {others === element.uid ? <KeyboardArrowUpOutlinedIcon /> : <KeyboardArrowDownIcon />}</li>
                                     </div>
-                                    <div>
-                                      <li className={`text-end fw-bold`}>
-                                        <OptionsPop list={item} options={optional} war={warrenties} ra={rssa} setra={setRsa} setwar={setWarrenties} setoptions={setOptional} total={item.ex_showroom_price + item.cow_cess + item.registeration_charges + item.road_safety_tax_cess + parseInt(registration === 0 ? item.rto : item[registration]) + item.insurance + item.mcd + item.fastag + item.hypothecation_charges + item.tax_collected_at_source_tcs + (optional ? item[optional.value] : null) + (warrenties ? item[warrenties.value] : null) + (rssa ? item[rssa.value] : null)} />
-
-                                        {optional || warrenties || rssa ? `₹ ${(optional ? item[optional.value] : null) + (warrenties ? item[warrenties.value] : null) + (rssa ? item[rssa.value] : null)}` : null}
-                                      </li>
-                                    </div>
                                   </div>
                                   <div style={{ fontSize: "17px" }} className='d-flex justify-content-between my-3 fw-bold'>
                                     <li>On-Road Price in {location} : </li>
-                                    <li>₹ {numFormat(item.ex_showroom_price + item.cow_cess + item.registeration_charges + parseInt(registration === 0 ? item.rto : item[registration]) + item.insurance + item.road_safety_tax_cess + item.mcd + item.fastag + item.hypothecation_charges + item.tax_collected_at_source_tcs + (optional ? item[optional.value] : null) + (warrenties ? item[warrenties.value] : null) + (rssa ? item[rssa.value] : null))} <PopupClone version={element.version_name} model={mod} brand={brand} mod_id={model} vers_id={version} pag={"price"} /> </li>
+                                    {Object.keys(item).includes("tax_collected_at_source_tcs") ? <li>₹ {numFormat(item.ex_showroom_price + item.cow_cess + item.registeration_charges + parseInt(registration === 0 ? item.rto : item[registration]) + item.insurance + item.road_safety_tax_cess + item.mcd + item.fastag + item.hypothecation_charges + item.tax_collected_at_source_tcs + (optional ? item[optional.value] : null) + (warrenties ? item[warrenties.value] : null) + (rssa ? item[rssa.value] : null))} <PopupClone version={element.version_name} model={mod} brand={brand} mod_id={model} vers_id={version} pag={"price"} /> </li> : <li>₹ {numFormat(item.ex_showroom_price + item.cow_cess + item.registeration_charges + parseInt(registration === 0 ? item.rto : item[registration]) + item.insurance + item.road_safety_tax_cess + item.mcd + item.fastag + item.hypothecation_charges + (optional ? item[optional.value] : null) + (warrenties ? item[warrenties.value] : null) + (rssa ? item[rssa.value] : null))} <PopupClone version={element.version_name} model={mod} brand={brand} mod_id={model} vers_id={version} pag={"price"} /> </li>}
                                   </div>
                                 </div>
                               </ul>)
@@ -435,7 +426,7 @@ const PriceBreakupPage = () => {
               }
             </tbody>
           </table>
-          <div className="showallbtn-sec">
+          <div className="showallbtn-sec pb-5">
             <div className="showallbtn text-center">
               <button onClick={() => {
                 tshow ? setShow(false) : setShow(true)
@@ -443,14 +434,13 @@ const PriceBreakupPage = () => {
             </div>
           </div>
         </div>
-        <div className="container desktop-page-width-60 mb-5">
+        {/* <div className="container desktop-page-width-60 mb-5">
           <h3 className='g-h3 my-2'>Similar Cars</h3>
           <div className='d-flex justify-content-between'>
             {similar.length > 0 ? similar.map((item) => {
               return (<div className="col-3 m-1 s-car-box text-center">
                 <img className='w-100' src={variantimg2} alt="car1" />
                 <h5 className='g-box-text'>{item.brand} {item.model_name} {item.version_name} {item.fuel_type} {item.transmission_type}</h5>
-                {/*<button className='g-h5 bg-white border w-100'>Compare Cars</button> */}
                 <button onClick={() => {
                   navigate(`/${item.brand.toLowerCase()}/${item.model_name.toLowerCase().split(" ").join("-")}/${item.version_name.toLowerCase().split(" ").join("-")}/price-in-${location.toLowerCase().replace(/ /g, "-")}`, {
                     state: {
@@ -463,7 +453,7 @@ const PriceBreakupPage = () => {
               </div>)
             }) : null}
           </div>
-        </div>
+        </div> */}
       </> : null}
 
     </>

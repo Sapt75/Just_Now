@@ -7,6 +7,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import PopupClone2 from './PopupLeadForm/Popupclone2';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import { IKContext, IKImage } from 'imagekitio-react';
 
 
 
@@ -157,7 +158,7 @@ const CarPriceFilter = () => {
                             dataLength={getprices ? getprices.length : null}
                             next={fetchAgain}
                             hasMore={true}
-                            // loader={<h4>Loading...</h4>}
+                        // loader={<h4>Loading...</h4>}
                         >
                             {getprices.length > 0 ? getprices.map((item) => {
                                 {
@@ -169,9 +170,15 @@ const CarPriceFilter = () => {
                                                         <div className="col-lg-4 col-6">
                                                             <div className="photo-thumbnail">
                                                                 <div className="photo">
-                                                                    <img className="d-block w-100"
-                                                                        src={defaultimg}
-                                                                        alt="car" href={`/car-model/${element.brand}/${element.model_name}`} />
+                                                                    <IKContext
+                                                                        publicKey="public_lzmiZh6Ro/q1w/s4jWGPmaB7L4Q="
+                                                                        urlEndpoint="https://ik.imagekit.io/GORP"
+                                                                        transformationPosition="path"
+                                                                    >
+
+                                                                        <IKImage className="d-block w-100" path={`/${element.brand === "Bmw" || element.brand === "Byd" || element.brand === "Mg" ? element.brand.toUpperCase() : element.brand}/${element.model_name.split(' ').join('_')}/${element.model_name.split(' ').join('_')}.jpg?updatedAt=${new Date().getTime() / 1000}`} />
+
+                                                                    </IKContext>
                                                                 </div>
                                                             </div>
                                                         </div>

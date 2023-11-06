@@ -5,7 +5,7 @@ import LocationContext from "./LocationContext";
 const LocationState = (props) => {
 
   if (sessionStorage.getItem("city") === null) {
-    sessionStorage.setItem("city", "Mumbai")
+    sessionStorage.setItem("city", "New Delhi")
   }
 
   const [location, setLocation] = React.useState(sessionStorage.getItem("city"))

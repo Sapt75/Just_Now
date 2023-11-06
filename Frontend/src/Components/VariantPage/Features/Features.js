@@ -45,9 +45,9 @@ function Features(props) {
               <Accordion.Header><b>{titleCase(item.replace("_", " ").replace("_", " ").replace("and", "&"))}</b></Accordion.Header>
               <Accordion.Body>
                 {Object.keys(cardetails[0].Features[item]).map((itm) => {
-                  return (<div className={`row spec-data ${cardetails[0].Features[item][itm] === "NULL" ? 'd-none' : 'd-flex'}`}>
+                  return (<div className={`row spec-data ${cardetails[0].Features[item][itm] === null ? 'd-none' : 'd-flex'}`}>
                     <div className='col-6'>{titleCase(itm.replace("_", " ").replace("_", " ").replace("_", " "))}</div>
-                    <div className='col-6 '>{cardetails[0].Features[item][itm] === "NULL" ? <p className='m-0'>Not Available</p> : cardetails[0].Features[item][itm]}</div>
+                    <div className='col-6 '>{cardetails[0].Features[item][itm] === null ? <p className='m-0'>Not Available</p> : cardetails[0].Features[item][itm]}</div>
                   </div>)
                 })}
               </Accordion.Body>

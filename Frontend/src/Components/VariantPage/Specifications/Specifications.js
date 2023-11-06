@@ -55,9 +55,10 @@ function Specifications(props) {
               <Accordion.Header><b>{titleCase(item.replace("_", " ").replace("_", " ").replace("and", "&"))}</b></Accordion.Header>
               <Accordion.Body>
                 {Object.keys(cardetails[0].Specifications[item]).map((itm) => {
-                  return (<div className={`row spec-data ${cardetails[0].Specifications[item][itm] === "NULL" ? 'd-none' : 'd-flex'}`}>
+                  console.log(cardetails[0].Specifications[item][itm], "Dow")
+                  return (<div className={`row spec-data ${cardetails[0].Specifications[item][itm] === null ? 'd-none' : 'd-flex'}`}>
                     <div className='col-6'>{titleCase(itm.replace("_", " ").replace("_", " ").replace("_", " "))}</div>
-                    <div className='col-6 '>{cardetails[0].Specifications[item][itm] === "NULL" ? <p className='m-0'>Not Available</p> : cardetails[0].Specifications[item][itm]}</div>
+                    <div className='col-6 '>{cardetails[0].Specifications[item][itm] === null ? <p className='m-0'>Not Available</p> : cardetails[0].Specifications[item][itm] }</div>
                   </div>)
                 })}
               </Accordion.Body>

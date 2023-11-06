@@ -256,7 +256,7 @@ const CarVariantTestPageNew = () => {
               <div className="specsdetails my-2">
                 <table className="table">
                   <tbody className='specs-table-box'>
-                    <tr className={`gray-background ${cardetails[0].Specifications.engine_and_transmission.arai_mileage === "NULL" ? 'd-none' : 'd-table-row'}`}>
+                    <tr className={`gray-background ${cardetails[0].Specifications.engine_and_transmission.arai_mileage === null ? 'd-none' : 'd-table-row'}`}>
                       <td className='width-70'>ARAI Mileage</td>
                       <td className='text-start'>{cardetails[0].Specifications.engine_and_transmission.arai_mileage}
                       </td>
@@ -266,47 +266,47 @@ const CarVariantTestPageNew = () => {
                                 <td className='text-start'>{cardetails[0].city_mileage}
                                 </td>
                                 </tr> */}
-                    <tr className={`gray-background ${cardetails[0].Specifications.engine_and_transmission.fuel_type === "NULL" ? 'd-none' : 'd-table-row'}`}>
+                    <tr className={`gray-background ${cardetails[0].Specifications.engine_and_transmission.fuel_type === null ? 'd-none' : 'd-table-row'}`}>
                       <td className='width-70'>Fuel Type</td>
                       <td className='text-start'>{cardetails[0].Specifications.engine_and_transmission.fuel_type}
                       </td>
                     </tr>
-                    <tr className={`gray-background ${cardetails[0].Specifications.engine_and_transmission.displacement === "NULL" ? 'd-none' : 'd-table-row'}`}>
+                    <tr className={`gray-background ${cardetails[0].Specifications.engine_and_transmission.displacement === null ? 'd-none' : 'd-table-row'}`}>
                       <td className='width-70'>Engine Displacement (cc)</td>
                       <td className='text-start'>{cardetails[0].Specifications.engine_and_transmission.displacement}
                       </td>
                     </tr>
-                    <tr className={`gray-background ${cardetails[0].no_of_cylinders === "NULL" ? 'd-none' : 'd-table-row'}`}>
+                    <tr className={`gray-background ${cardetails[0].no_of_cylinders === null ? 'd-none' : 'd-table-row'}`}>
                       <td className='width-70'>No. of cylinder</td>
                       <td className='text-start'>{cardetails[0].no_of_cylinders}
                       </td>
                     </tr>
-                    <tr className={`gray-background ${cardetails[0].max_power === "NULL" ? 'd-none' : 'd-table-row'}`}>
+                    <tr className={`gray-background ${cardetails[0].max_power === null ? 'd-none' : 'd-table-row'}`}>
                       <td className='width-70'>Max Power (bhp@rpm)</td>
                       <td className='text-start'>{cardetails[0].max_power}
                       </td>
                     </tr>
-                    <tr className={`gray-background ${cardetails[0].max_torque === "NULL" ? 'd-none' : 'd-table-row'}`}>
+                    <tr className={`gray-background ${cardetails[0].max_torque === null ? 'd-none' : 'd-table-row'}`}>
                       <td className='width-70'>Max Torque (nm@rpm)</td>
                       <td className='text-start'>{cardetails[0].max_torque}
                       </td>
                     </tr>
-                    <tr className={`gray-background ${cardetails[0].seating_capacity === "NULL" ? 'd-none' : 'd-table-row'}`}>
+                    <tr className={`gray-background ${cardetails[0].seating_capacity === null ? 'd-none' : 'd-table-row'}`}>
                       <td className='width-70'>Seating Capacity</td>
                       <td className='text-start'>{cardetails[0].seating_capacity}
                       </td>
                     </tr>
-                    <tr className={`gray-background ${cardetails[0].transmission_type === "NULL" ? 'd-none' : 'd-table-row'}`}>
+                    <tr className={`gray-background ${cardetails[0].transmission_type === null ? 'd-none' : 'd-table-row'}`}>
                       <td className='width-70'>TransmissionType</td>
                       <td className='text-start'>{cardetails[0].transmission_type}
                       </td>
                     </tr>
-                    <tr className={`gray-background ${cardetails[0].Specifications.capacity.boot_space_Litres === "NULL" ? 'd-none' : 'd-table-row'}`}>
+                    <tr className={`gray-background ${cardetails[0].Specifications.capacity.boot_space_Litres === null ? 'd-none' : 'd-table-row'}`}>
                       <td className='width-70'>Boot Space(Litres)</td>
                       <td className='text-start'>{cardetails[0].Specifications.capacity.boot_space_Litres}
                       </td>
                     </tr>
-                    <tr className={`gray-background ${cardetails[0].Specifications.capacity.fuel_tank_capacity === "NULL" ? 'd-none' : 'd-table-row'}`}>
+                    <tr className={`gray-background ${cardetails[0].Specifications.capacity.fuel_tank_capacity === null ? 'd-none' : 'd-table-row'}`}>
                       <td className='width-70'>Fuel Tank Capacity</td>
                       <td className='text-start'>{cardetails[0].Specifications.capacity.fuel_tank_capacity}
                       </td>
@@ -490,7 +490,7 @@ const CarVariantTestPageNew = () => {
               </tr>
               {
                 finalVersion.map((element, id) => {
-                  return allVersionPrice.length > 0 ? <tr key={id} className={`varients-firstrow gray-background`}>
+                  return allVersionPrice.length < 0 ? <tr key={id} className={`varients-firstrow gray-background`}>
                     <td style={{ cursor: "pointer" }} onClick={() => {
                       navigate(`/new-cars/${element.brand.toLowerCase()}/${element.model_name.toLowerCase().split(" ").join("-")}/${element.version_name.toLowerCase().split(" ").join("-")}`)
                       window.location.reload(false)
@@ -583,14 +583,13 @@ const CarVariantTestPageNew = () => {
             </div>
           </div> */}
         </div>
-        <div className="container desktop-page-width-60 mb-5 mt-5">
+        {/* <div className="container desktop-page-width-60 mb-5 mt-5">
           <h3 className='g-h3 my-2'>Similar Cars</h3>
           <div className='d-flex justify-content-between'>
             {similar.length > 0 ? similar.map((item) => {
               return (<div className="col-3 m-1 s-car-box text-center">
                 <img className='w-100' src={variantimg2} alt="car1" />
                 <h5 className='g-box-text'>{item.brand} {item.model_name} {item.version_name} {item.Specifications.engine_and_transmission.fuel_type} {item.transmission_type}</h5>
-                {/*<button className='g-h5 bg-white border w-100'>Compare Cars</button> */}
 
 
                 <Link state={{
@@ -601,21 +600,8 @@ const CarVariantTestPageNew = () => {
                 </Link>
               </div>)
             }) : null}
-
-            {/* <div className="col-3 m-1 s-car-box">
-              <img className='w-100' src={variantimg3} alt="car1" />
-              <h5 className='g-box-text'>Hyundai Creta E <br />Rs.10.44 Lakh*</h5>
-              <button className='g-h5 bg-white border w-100'>Compare Cars</button>
-              <button className='g-h5 g-button border w-100'>View On Road Price</button>
-            </div>
-            <div className="col-3 m-1 s-car-box">
-              <img className='w-100' src={variantimg4} alt="car1" />
-              <h5 className='g-box-text'>Kia Sonet 1.2 HTE <br />Rs.7.49 Lakh*</h5>
-              <button className='g-h5 bg-white border w-100'>Compare Cars</button>
-              <button className='g-h5 g-button border w-100'>View On Road Price</button>
-            </div> */}
           </div>
-        </div>
+        </div> */}
       </> : null}
 
     </>

@@ -51,6 +51,7 @@ function HomePage() {
         status: true
     })
 
+
     const context = React.useContext(locationContext)
 
     let { showInp, setShowInp } = context
@@ -119,16 +120,6 @@ function HomePage() {
 
     return (
         <>
-            <Helmet>
-                <title>GetOnRoadPrice</title>
-                <meta name="description" content="GetOnRoadPrice" />
-                {/* <link rel="canonical" href={`${window.location.href}`} />
-        <meta property="og:type" content="Latest Cars" />
-        <meta property="og:image" content="https://th.bing.com/th/id/R.764cdbd03ff0df78a4f5cf8d427ad57d?rik=7BB%2b%2f9hcgLBBDg&riu=http%3a%2f%2fwww.hdcarwallpapers.com%2fwalls%2ftesla_roadster_4k-HD.jpg&ehk=00%2fcHRBzZVUkWuiEdOOXMyZZs1RPNEIe9qriLTzYX6M%3d&risl=1&pid=ImgRaw&r=0" />
-        <meta property="og:url" content={`${window.location.href}`} />
-        <meta content={`${brand} ${model} Latest 2023`} property="og:title" />
-        <meta content={`${brand} ${model}, ipsum dolor sit amet consectetur adipisicing elit. Soluta, facere? Voluptates quod numquam nemo facere rem. Ut laudantium eveniet saepe.`} property='og:description' /> */}
-            </Helmet>
             <div className="banner" id="banner">
                 <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div className="carousel-inner banner">
@@ -193,7 +184,7 @@ function HomePage() {
                         <div className="faq-info">
                             <ul className="nav nav-tabs border-0 mb-4" id="myTab" role="tablist">
                                 <li className="nav-item" role="presentation">
-                                    <button className="nav-link active" id="brand-tab" data-bs-toggle="tab" data-bs-target="#home2" type="button" role="tab" aria-controls="home2" aria-selected="true">By Brand</button>
+                                    <button className="nav-link active" id="brand-tab" data-bs-toggle="tab" data-bs-target="#brand" type="button" role="tab" aria-controls="brand" aria-selected="true">By Brand</button>
                                 </li>
                                 <li className="nav-item" role="presentation">
                                     <button className="nav-link" id="budget-tab" data-bs-toggle="tab" data-bs-target="#budget" type="button" role="tab" aria-controls="budget" aria-selected="false">Budget</button>
@@ -207,9 +198,9 @@ function HomePage() {
                                 <li className="nav-item" role="presentation">
                                     <button className="nav-link" id="transmission-tab" data-bs-toggle="tab" data-bs-target="#trasmission" type="button" role="tab" aria-controls="trasmission" aria-selected="false">Trasmission</button>
                                 </li>
-                                <li className="nav-item" role="presentation">
+                                {/* <li className="nav-item" role="presentation">
                                     <button className="nav-link" id="seating-tab" data-bs-toggle="tab" data-bs-target="#seating" type="button" role="tab" aria-controls="seating" aria-selected="false">Seating Capacity</button>
-                                </li>
+                                </li> */}
                             </ul>
                             <div className="tab-content" id="myTabContent2">
                                 <div className="tab-pane fade show active" id="brand" role="tabpanel" aria-labelledby="brand-tab">
@@ -238,7 +229,7 @@ function HomePage() {
                     </div>
                 </div>
             </div>
-            <MostSearchedCars />
+            {/* <MostSearchedCars /> */}
         </>
     )
 }

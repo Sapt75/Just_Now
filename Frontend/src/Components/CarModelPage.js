@@ -372,9 +372,9 @@ function CarModelPage() {
 
                   </div>
                   <div className="desplay-none-phone my-2">
-                    <Link to={`/new-car-dealers/${brand.toLowerCase()}-car-dealers-${location.toLowerCase().replace(/ /g, '-')}`}>
+                    {/* <Link to={`/new-car-dealers/${brand.toLowerCase()}-car-dealers-${location.toLowerCase().replace(/ /g, '-')}`}>
                       <button className='g-link-button g-underline text-dark'>Locate Delear Near You</button>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>
@@ -579,7 +579,7 @@ function CarModelPage() {
         <PopupLeadForm />
         {/* <button onClick={getonroadpricebtn} className='w-100 border-0 blue-background-btn py-3 my-4 g-h3'>Get On Road Price</button> */}
       </div>
-      <div className="container desktop-page-width-60" ref={car_col}>
+      <div className="container desktop-page-width-60 pb-5" ref={car_col}>
         <div className="colorstitle">
           <div className="colors">
             <h3 className='g-bold'>Colours</h3>
@@ -587,7 +587,7 @@ function CarModelPage() {
           </div>
           <p>{getmodels.length > 0 ? getmodels[0].color_algorithm : null}</p>
         </div>
-        <div className="colorimage border text-center py-3">
+        {/* <div className="colorimage border text-center py-3">
           <IKContext
             publicKey="public_lzmiZh6Ro/q1w/s4jWGPmaB7L4Q="
             urlEndpoint="https://ik.imagekit.io/GORP"
@@ -616,9 +616,9 @@ function CarModelPage() {
             </IKContext>
           </div>
           <p id='colorn' className='colourname'>{colors.length > 0 ? colors[0].name.split("_")[1].charAt(0).toUpperCase() + colors[0].name.split("_")[1].slice(1) : null}</p>
-        </div>
+        </div> */}
       </div>
-      <div className="container my-5 desktop-page-width-60" ref={car_mil}>
+      {/* <div className="container my-5 desktop-page-width-60" ref={car_mil}>
         <div className="mileage">
           <div className="mileagetitle">
             <h4 className='g-bold'>Mileage</h4>
@@ -629,7 +629,6 @@ function CarModelPage() {
             <table className="table">
               <tbody className='milage-table-box'>
                 <tr>
-                  {/* <th scope="col">#</th> */}
                   <th>Varients</th>
                   <th>Transmission</th>
                   <th>ARAI Mileage</th>
@@ -638,7 +637,6 @@ function CarModelPage() {
                   getmodels.map((element, id) => {
                     return (
                       <tr key={id} className={`gray-background ${element.Specifications.engine_and_transmission.arai_mileage === "NULL" ? 'd-none' : 'd-table-row'} ${element.Specifications.engine_and_transmission.arai_mileage ? null : "d-none"}`}>
-                        {/* <th scope="row">1</th> */}
                         <td>{element.Specifications.engine_and_transmission.fuel_type}({element.Specifications.engine_and_transmission.displacement})</td>
                         <td>{element.transmission_type}</td>
                         <td className={`g-bold`}>{element.Specifications.engine_and_transmission.arai_mileage}</td>
@@ -646,31 +644,11 @@ function CarModelPage() {
                     )
                   })
                 }
-                {/* <tr className='gray-background'>
-                  <td>Petrol (1086 cc)</td>
-                  <td>Automatic(AMT)</td>
-                  <td className='g-bold'>20.30 kmpl</td>
-                </tr>
-                <tr className='light-gray-background'>
-                  <td>Petrol (1197 cc)</td>
-                  <td>Manual</td>
-                  <td className='g-bold'>21.00 kmpl</td>
-                </tr>
-                <tr className='gray-background'>
-                  <td>Diesel (1100 cc)</td>
-                  <td>Automatic(AMT)</td>
-                  <td className='g-bold'>21.00 kmpl</td>
-                </tr>
-                <tr className='light-gray-background'>
-                  <td>Diesel (1100 cc)</td>
-                  <td>Manual</td>
-                  <td className='g-bold'>21.00 kmpl</td>
-                </tr> */}
               </tbody>
             </table>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="container my-2 desktop-page-width-60">
         <div className="price-title">
           <h3 className='g-bold'>Price</h3>
@@ -689,12 +667,7 @@ function CarModelPage() {
               {city.length > 0 ? city.map((itm) => {
                 return <tr style={{ cursor: "pointer" }} onClick={() => {
                   setLocation(itm.city_name)
-                  usenav(`/${brand}/${model}/${itm.city_name}`, {
-                    state: {
-                      model: model_id,
-                      version: uniqueId
-                    }
-                  })
+                  usenav(`/${brand.toLowerCase().split(" ").join("-")}/${model.toLowerCase().split(" ").join("-")}/price-in-${itm.city_name.toLowerCase().split(" ").join("-")}`)
                 }} className='gray-background'>
                   <td className='fw-bold'>{itm.city_name}</td>
                   <td className='justify-center-d d-flex fw-bold'>₹{numFormat(itm.ex_showroom_price)}*</td>
@@ -703,12 +676,7 @@ function CarModelPage() {
               {rcity.length > 0 ? rcity.map((itm) => {
                 return <tr style={{ cursor: "pointer" }} onClick={() => {
                   setLocation(itm.city_name)
-                  usenav(`/${brand}/${model}/${itm.city_name}`, {
-                    state: {
-                      model: model_id,
-                      version: uniqueId
-                    }
-                  })
+                  usenav(`/${brand.toLowerCase().split(" ").join("-")}/${model.toLowerCase().split(" ").join("-")}/price-in-${itm.city_name.toLowerCase().split(" ").join("-")}`)
                 }} className='gray-background'>
                   <td className='fw-bold'>{itm.city_name}</td>
                   <td className='justify-center-d d-flex fw-bold'>₹{numFormat(itm.ex_showroom_price)}*</td>
@@ -718,11 +686,11 @@ function CarModelPage() {
           </table>
         </div>
       </div>
-      <div className="container getonroadpricebutton my-2 desktop-page-width-60">
+      <div className="container getonroadpricebutton my-2 desktop-page-width-60 pb-5">
         <PopupLeadForm />
         {/* <button onClick={getonroadpricebtn} className='w-100 border-0 blue-background-btn py-3 my-4 g-h3'>Get On Road Price</button> */}
       </div>
-      <div className="container pros-and-cons-sec mt-2 desktop-page-width-60">
+      {/* <div className="container pros-and-cons-sec mt-2 desktop-page-width-60">
         <div className="pros-and-cons-sec-heading">
           <h3 className='g-bold'>{brand} {model} Expert Tips</h3>
         </div>
@@ -736,8 +704,8 @@ function CarModelPage() {
             <div dangerouslySetInnerHTML={tips.cons ? tips.cons : null}></div>
           </div>
         </div>
-      </div>
-      <div className="container desktop-page-width-60">
+      </div> */}
+      {/* <div className="container desktop-page-width-60">
         <div className="videos-sec">
           <h5 className='g-bold mt-5 mb-3'>{brand} {model} Video Reviews</h5>
           <div className="row">
@@ -748,10 +716,9 @@ function CarModelPage() {
               <iframe width="100%" height="315" src="https://www.youtube.com/embed/Hx-8mVFvWOg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
           </div>
-          {/* <video src="https://www.youtube.com/watch?v=k0IqIjfVHUA"></video> */}
         </div>
 
-      </div>
+      </div> */}
     </>
   )
 }

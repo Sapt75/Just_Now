@@ -887,7 +887,7 @@ router.get('/single_version/:mid/:city', async (req, res) => {
 })
 
 router.get('/all_model_prices/:brand', async (req, res) => {
-    let data = await Model_Prices.find({ brand: req.params.brand })
+    let data = await Model_Prices.find({ brand: { $regex: req.params.brand, $options: 'i' } })
     res.send(data)
 })
 
@@ -990,17 +990,16 @@ router.get('/dealer_brand/:brand/:pincode?', async (req, res) => {
 })
 
 router.post('/price_query', async (req, res) => {
-    let { name, email, phone, pincode, car } = req.body
+    let { name, phone, pincode, car } = req.body
 
     let query = new Price_Query({
         name: name,
-        email: email,
         number: phone,
         pincode: pincode,
         car: car
     })
 
-    let data = await PriceQuery.findOne({ car: car, name: name, email: email })
+    let data = await PriceQuery.findOne({ car: car, name: name, number: phone })
 
     if (data) {
         res.status(400).send("Query Already Exists")
@@ -1071,7 +1070,7 @@ router.get('/remove-user/:email', async (req, res) => {
     res.send(dat)
 })
 
-router.get("/car-search/:name", async (req, res) => {
+router.get("/car-search/", async (req, res) => {
     let data = await CarData.find({ full_name: { $regex: `(?i)${req.params.name}` } }).select("model_name brand full_name uid model_id").limit(150)
     let newData = data.filter((value, index, self) => {
         return index === self.findIndex((t) => {
@@ -1082,7 +1081,12 @@ router.get("/car-search/:name", async (req, res) => {
     //     { $project: { full_name: { $concat: [ "$brand", " ", "$model_name" ] } } },
     //     { $merge: "cardatas" }
     //   ])
-    // let data = await CarData.updateMany({ $unset: { FullName: "" } })
+
+    // let data = await CarData.find()
+    // data.map(async (item)=>{
+    //     await CarData.updateOne({uid: item.uid},{$set: {full_name: `${item.brand} ${item.model_name}`}} )
+    // })
+    // res.send("Done")
     // console.log(data)
     res.send(newData)
 })
@@ -1098,7 +1102,7 @@ router.get("/try-link", async (req, res) => {
 
 
 router.get("/all_typ/:car", async (req, res) => {
-    let data = await CarData.find({ brand: req.params.car }).select("model_name Specifications transmission_type -_id")
+    let data = await CarData.find({ brand: { $regex: req.params.car, $options: 'i' } }).select("model_name Specifications transmission_type -_id")
     res.send(data)
 })
 
@@ -1795,7 +1799,7 @@ router.post("/verification", async (req, res) => {
 
 
 router.get("/brand_desc/:brand", async (req, res) => {
-    let data = await CarData.findOne({ brand: req.params.brand }).select("brand_description -_id")
+    let data = await CarData.findOne({ brand: { $regex: req.params.brand, $options: 'i' } }).select("brand_description -_id")
     res.send(data)
 })
 
@@ -1967,7 +1971,7 @@ router.get("/boom", async (req, res) => {
         let price = await Model_Prices.findOne({ brand: item }).select("max_price min_price -_id")
 
 
-        let text = `${item} Car price in India starts in at ₹ ${price ? price.min_price === undefined ? 0 : numFormat(price.min_price) : null} and goes upto ₹ ${price ? price.max_price === undefined ? 0 : numFormat(price.max_price) : null} (ex-showroom price Mumbai). ${item} has ${newData.length} car Models in 2023 offered in India. `
+        let text = `${item} Car price in India starts at ₹ ${price ? price.min_price === undefined ? 0 : numFormat(price.min_price) : null} and goes upto ₹ ${price ? price.max_price === undefined ? 0 : numFormat(price.max_price) : null} (ex-showroom price Mumbai). ${item} has ${newData.length} car Models in 2023 offered in India. `
 
 
         let body = "This includes"

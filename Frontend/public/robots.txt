@@ -1,4 +1,22 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow: /admin
-Disallow: /https://getonroadprice.com/sitemap.xml
+User-agent: GPTBot
+User-agent: CCBot
+User-Agent: omgili
+User-Agent: omgilibot
+User-agent: MAZBot
+User-agent: ChatGPT-User
+User-agent: Baiduspider
+User-agent: DataForSeoBot
+Disallow: /
+
+Disallow: /getonroadprice/
+Disallow: /new-car-dealers/
+Disallow: /new-car-price/
+Disallow: /cars/body-type/
+Disallow: /cars/fuel-type/
+Disallow: /cars/body_type/
+Disallow: /cars/transmission-type/
+Disallow: /GORP/
+Disallow: /admin/
+
+Sitemap: https://www.getonroadprice.com/sitemap/gorp-index.xml

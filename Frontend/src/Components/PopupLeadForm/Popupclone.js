@@ -30,12 +30,12 @@ function PopupClone(props) {
       
       <Modal className='lead-form-popup' show={show} onHide={() => {
         handleClose()
-        navigate(`/${props.brand}/${props.model}/${location}`, {
-          state: {
-            model: props.mod_id,
-            version: props.vers_id
-          }
-        })
+        // navigate(`/${props.brand}/${props.model}/${location}`, {
+        //   state: {
+        //     model: props.mod_id,
+        //     version: props.vers_id
+        //   }
+        // })
       }}>
         <Modal.Header closeButton>
           <Modal.Title>

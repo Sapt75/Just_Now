@@ -27,7 +27,6 @@ function LeadGenerationForm(props) {
             method: "POST",
             body: JSON.stringify({
                 name: name.value,
-                email: email.value,
                 phone: phone.value,
                 pincode: pincode.value,
                 car: `${props.value === "one" ? `${props.brand} ${props.model}` : `${props.brand} ${props.model} ${props.version} ${props.fuel} ${props.transmission}`} `
@@ -86,10 +85,6 @@ function LeadGenerationForm(props) {
                                     <label className='w-50' htmlFor="lname">Mobile Number:</label>
                                     <input autoComplete required className='w-50' type="number" id="phone" name="phone"></input>
                                 </div>
-                                <div className="email-id d-flex my-3">
-                                    <label className='w-50' htmlFor="lname">Email-ID:</label>
-                                    <input autoComplete required className='w-50' type="text" id="email" name="email" ></input>
-                                </div>
                                 <div className="pincode my-3">
                                     <label className='w-50' htmlFor="lname">Pincode:</label>
                                     <input autoComplete onChange={pincodeData} required className='w-50' type="number" id="pincode" name="pincode" ></input>
@@ -117,16 +112,6 @@ function LeadGenerationForm(props) {
                                     <div className="form-submit-button"><input className='w-100 blue-background-btn border-0 py-2' type="submit" value="Submit"></input></div>
                                 </div>
                             </form>
-                            <div className="optional-box">
-                                <div className="inneroptionalbox">
-                                    <div className="optionalform">
-                                        <label className='my-2' htmlFor="optional">Optional</label>
-                                        <input className='w-100 blue-background-btn border-0 py-2 ' type="button" value="Generate OTP" />
-                                        <input className='w-100 my-3' type="number" name="otp" id="otp" />
-                                        <input className='w-100 blue-background-btn border-0 py-2 ' type="button" value="Verify OTP" />
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

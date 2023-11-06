@@ -31,11 +31,13 @@ import PriceBreakupPage from './Components/VariantPage/PriceBreakupPage';
 import PrivacyPolicy from './Components/PrivacyPolicy';
 import Terms_Conditions from './Components/Terms_Conditions';
 import AboutUs from './Components/About';
+import { Helmet } from 'react-helmet-async';
 
 
 
 
 function App() {
+
 
 
   return (
@@ -47,7 +49,7 @@ function App() {
         {/* <HomePage /> */}
         <Router >
           <Navebar />
-          <NavHeader />
+          {/* <NavHeader /> */}
           <Routes>
             <Route index element={<HomePage />} />
             <Route path='/' element={<HomePage />} />

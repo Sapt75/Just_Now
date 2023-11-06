@@ -11,6 +11,7 @@ import TestSeat from './TestFolder/TestSeat';
 import TestTransmission from './TestFolder/TestTransmission';
 import PopupClone2 from './PopupLeadForm/Popupclone2';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import { IKContext, IKImage } from 'imagekitio-react';
 
 
 
@@ -173,9 +174,15 @@ const CarFilters = () => {
                                                 <div className="col-lg-4 col-6">
                                                     <div className="photo-thumbnail">
                                                         <div className="photo">
-                                                            <img className="d-block w-100"
-                                                                src={defaultimg}
-                                                                alt="car" href={`/car-model/${element.brand.toLowerCase().split(' ').join("-")}/${element.model_name.toLowerCase().split(' ').join("-")}`} />
+                                                        <IKContext
+                                                                publicKey="public_lzmiZh6Ro/q1w/s4jWGPmaB7L4Q="
+                                                                urlEndpoint="https://ik.imagekit.io/GORP"
+                                                                transformationPosition="path"
+                                                            >
+
+                                                                <IKImage className="d-block w-100" path={`/${element.brand === "Bmw" || element.brand === "Byd" || element.brand === "Mg" ? element.brand.toUpperCase() : element.brand}/${element.model_name.split(' ').join('_')}/${element.model_name.split(' ').join('_')}.jpg?updatedAt=${new Date().getTime() / 1000}`} />
+
+                                                            </IKContext>
                                                         </div>
                                                     </div>
                                                 </div>
